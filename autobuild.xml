@@ -1,0 +1,55 @@
+<?xml version="1.0" ?>
+<llsd>
+<map>
+    <key>package_description</key>
+    <map>
+      <key>canonical_repo</key>
+      <string>https://bitbucket.org/nickyd/3p-gstreamer10</string>
+      <key>copyright</key>
+      <string>Copyright (C) 2007 Free Software Foundation, Inc. &lt;http://fsf.org/&gt;</string>
+      <key>description</key>
+      <string>gstreamer header</string>
+      <key>license</key>
+      <string>LGPL</string>
+      <key>license_file</key>
+      <string>LICENSES/gstreamer10.txt</string>
+      <key>name</key>
+      <string>gstreamer10</string>
+      <key>platforms</key>
+      <map>
+        <key>linux64</key>
+        <map>
+          <key>build_directory</key>
+          <string>stage</string>
+          <key>configurations</key>
+          <map>
+            <key>Release</key>
+            <map>
+              <key>build</key>
+              <map>
+                <key>command</key>
+                <string>../build-cmd.sh</string>
+              </map>
+              <key>default</key>
+              <string>True</string>
+              <key>name</key>
+              <string>Release</string>
+            </map>
+          </map>
+          <key>manifest</key>
+          <array>
+            <string>include/*</string>
+          </array>
+          <key>name</key>
+          <string>linux64</string>
+        </map>
+      </map>
+      <key>version_file</key>
+      <string>Version.txt</string>
+    </map>
+    <key>type</key>
+    <string>autobuild</string>
+    <key>version</key>
+    <string>1.3</string>
+  </map>
+</llsd>
