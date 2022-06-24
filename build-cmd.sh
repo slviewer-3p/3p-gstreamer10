@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION="1.6.4"
+VERSION="1.14.5"
 SOURCE="gstreamer-${VERSION}"
 
 stage=`pwd`
