@@ -2,17 +2,23 @@
 
 VERSION="1.14.5"
 SOURCE="gstreamer-${VERSION}"
-
+GST_SOURCE="gst-plugins-base-1.8.1"
 stage=`pwd`
-echo $stage
 
 pushd ../$SOURCE
-./configure -prefix=$stage
-make -j8
-make install
+  ./configure -prefix=$stage
+  make -j8
+  make install
 popd
 
-cp lib/gstreamer-1.0/include/gst/* include/gstreamer-1.0/gst/
+export PKG_CONFIG_PATH=${stage}/lib/pkgconfig 
+
+pushd ../$GST_SOURCE
+  ./configure -prefix=$stage
+  make -j8
+  make install
+popd
+
 echo -n $VERSION > Version.txt
 mkdir -p LICENSES
 cp ../gstreamer10.txt LICENSES/
