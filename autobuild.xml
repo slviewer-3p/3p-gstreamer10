@@ -4,7 +4,7 @@
     <key>package_description</key>
     <map>
       <key>canonical_repo</key>
-      <string>https://bitbucket.org/nickyd/3p-gstreamer10</string>
+      <string>https://github.com/slviewer-3p/3p-gstreamer10</string>
       <key>copyright</key>
       <string>Copyright (C) 2007 Free Software Foundation, Inc. &lt;http://fsf.org/&gt;</string>
       <key>description</key>
