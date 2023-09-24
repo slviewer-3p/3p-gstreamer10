@@ -5,21 +5,8 @@ SOURCE="gstreamer-${VERSION}"
 GST_SOURCE="gst-plugins-base-1.8.1"
 stage=`pwd`
 
-pushd ../$SOURCE
-  autoreconf
-  ./configure -prefix=$stage
-  make -j`nproc`
-  make install
-popd
-
-export PKG_CONFIG_PATH=${stage}/lib/pkgconfig 
-
-pushd ../$GST_SOURCE
-  autoreconf
-  ./configure -prefix=$stage
-  make -j`nproc` 
-  make install
-popd
+mkdir -p include
+cp -a /usr/include/gstreamer-1.0 include
 
 echo -n $VERSION > Version.txt
 mkdir -p LICENSES
